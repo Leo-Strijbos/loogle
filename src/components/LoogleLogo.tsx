@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const letters = [
-  { char: "l", color: "#4285F4" },
+  { char: "L", color: "#4285F4" },
   { char: "o", color: "#EA4335" },
   { char: "o", color: "#FBBC05" },
   { char: "g", color: "#4285F4" },
