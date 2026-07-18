@@ -40,7 +40,8 @@ export const queries: QueryEntry[] = [
     results: [
       {
         title: "Leo Strijbos — Founding Engineer & Cambridge CS student",
-        url: "https://loogle.com/about/leo-strijbos",
+        url: "https://www.linkedin.com/in/leostrijbos/",
+        href: "https://www.linkedin.com/in/leostrijbos/",
         snippet:
           "Leo Strijbos is a Computer Science undergraduate at the University of Cambridge and founding engineer at Briefcase, an AI autopilot for accountants. Previously cofounded The Bot Factory and interned twice in ML research at Novartis.",
       },
@@ -148,11 +149,18 @@ export const queries: QueryEntry[] = [
           "Watches your screen, walks you through workflows step by step, and turns what you do into reusable skill files. Teach a process on screen, then ask Pinky to guide you later — or export .md skill files for other AI tools. Voice + vision with Control + Option across multiple monitors.",
       },
       {
-        title: "DarwinGP — client-side neuroevolution toy",
+        title: "OttoProp — AI intern for property managers",
+        url: "https://github.com/Leo-Strijbos/OttoPropAI",
+        href: "https://github.com/Leo-Strijbos/OttoPropAI",
+        snippet:
+          "1 of 11 teams invited to the Ada Ventures hackathon for £100k in funding. An AI intern that autonomously handles maintenance requests end-to-end, sends emails, and updates the CRM using the LangChain agentic framework.",
+      },
+      {
+        title: "DarwinGP — genetic algorithm learns to race around randomly-generated racetracks",
         url: "https://github.com/Leo-Strijbos/DarwinGP",
         href: "https://github.com/Leo-Strijbos/DarwinGP",
         snippet:
-          "Hundreds of tiny feed-forward networks drive neon Tron-style cars on procedural closed circuits. A genetic algorithm selects parents, crosses them over, mutates weights, and keeps elites — no server, no ML frameworks, just Next.js and a canvas.",
+          "Hundreds of tiny feed-forward networks drive cars on procedural closed circuits. A genetic algorithm selects parents, crosses them over, mutates weights, and keeps elites — no server, no ML frameworks, just Next.js and a canvas.",
       },
       {
         title: "Latch Writing — focused macOS note-taking",
@@ -160,13 +168,6 @@ export const queries: QueryEntry[] = [
         href: "https://github.com/Leo-Strijbos/latch",
         snippet:
           "A minimal macOS note-taking app built for focused writing. Stores notes as local Markdown files, keeps the interface quiet, and includes an intentional focus lock mode for writing without app switching.",
-      },
-      {
-        title: "OttoProp — AI intern for property managers",
-        url: "https://github.com/Leo-Strijbos/OttoPropAI",
-        href: "https://github.com/Leo-Strijbos/OttoPropAI",
-        snippet:
-          "1 of 11 teams invited to the Ada Ventures hackathon for £100k in funding. An AI intern that autonomously handles maintenance requests end-to-end, sends emails, and updates the CRM using the LangChain agentic framework.",
       },
       {
         title: "Malaria Detection — Faster R-CNN with TensorFlow",
@@ -184,7 +185,7 @@ export const queries: QueryEntry[] = [
   },
   {
     id: "thinking",
-    question: "What is Leo currently thinking about?",
+    question: "What is Leo currently interested in?",
     aliases: ["computational biology", "protein", "alphafold", "research interests"],
     results: [
       {
