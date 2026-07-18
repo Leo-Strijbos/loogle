@@ -163,7 +163,8 @@ export const queries: QueryEntry[] = [
       },
       {
         title: "OttoProp — AI intern for property managers",
-        url: "https://loogle.com/projects/ottoprop",
+        url: "https://github.com/Leo-Strijbos/OttoPropAI",
+        href: "https://github.com/Leo-Strijbos/OttoPropAI",
         snippet:
           "1 of 11 teams invited to the Ada Ventures hackathon for £100k in funding. An AI intern that autonomously handles maintenance requests end-to-end, sends emails, and updates the CRM using the LangChain agentic framework.",
       },
