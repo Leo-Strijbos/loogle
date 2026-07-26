@@ -50,7 +50,61 @@ export const queries: QueryEntry[] = [
         url: "https://github.com/Leo-Strijbos",
         href: "https://github.com/Leo-Strijbos",
         snippet:
-          "Open-source and personal projects including DarwinGP, macOS tools, and experiments in AI and computational biology.",
+          "Open-source and personal projects including Mind, DarwinGP, macOS tools, and experiments in AI and computational biology.",
+      },
+    ],
+  },
+  {
+    id: "projects",
+    question: "What projects has Leo built?",
+    aliases: ["projects", "portfolio", "mind", "pinky", "darwingp", "ottoprop", "latch"],
+    results: [
+      {
+        title: "Mind — plug-and-play LLM memory backend",
+        url: "https://github.com/Leo-Strijbos/Mind",
+        href: "https://github.com/Leo-Strijbos/Mind",
+        snippet:
+          "A memory backend for AI agents that models the human brain. Agents send raw perceptions into Mind and query it for the smallest useful memory packet before they act. Mind owns storage, consolidation, recall, corrections, retention, and evidence packaging — callers should not have to design memory policy.",
+      },
+      {
+        title: "Pinky — macOS menu bar workflow companion",
+        url: "https://github.com/Leo-Strijbos/Pinky",
+        href: "https://github.com/Leo-Strijbos/Pinky",
+        snippet:
+          "Watches your screen, walks you through workflows step by step, and turns what you do into reusable skill files. Teach a process on screen, then ask Pinky to guide you later — or export .md skill files for other AI tools. Voice + vision with Control + Option across multiple monitors.",
+      },
+      {
+        title: "OttoProp — AI intern for property managers",
+        url: "https://github.com/Leo-Strijbos/OttoPropAI",
+        href: "https://github.com/Leo-Strijbos/OttoPropAI",
+        snippet:
+          "1 of 11 teams invited to the Ada Ventures hackathon for £100k in funding. An AI intern that autonomously handles maintenance requests end-to-end, sends emails, and updates the CRM using the LangChain agentic framework.",
+      },
+      {
+        title: "DarwinGP — genetic algorithm learns to race around randomly-generated racetracks",
+        url: "https://github.com/Leo-Strijbos/DarwinGP",
+        href: "https://github.com/Leo-Strijbos/DarwinGP",
+        snippet:
+          "Hundreds of tiny feed-forward networks drive cars on procedural closed circuits. A genetic algorithm selects parents, crosses them over, mutates weights, and keeps elites — no server, no ML frameworks, just Next.js and a canvas.",
+      },
+      {
+        title: "Latch Writing — focused macOS note-taking",
+        url: "https://github.com/Leo-Strijbos/latch",
+        href: "https://github.com/Leo-Strijbos/latch",
+        snippet:
+          "A minimal macOS note-taking app built for focused writing. Stores notes as local Markdown files, keeps the interface quiet, and includes an intentional focus lock mode for writing without app switching.",
+      },
+      {
+        title: "Malaria Detection — Faster R-CNN with TensorFlow",
+        url: "https://loogle.com/projects/malaria-detection",
+        snippet:
+          "Built a Faster R-CNN ResNet model with TensorFlow for malaria parasite detection (90% test accuracy), integrated via a Streamlit frontend.",
+      },
+      {
+        title: "Account Sharing Detection — keystroke dynamics research",
+        url: "https://loogle.com/projects/account-sharing",
+        snippet:
+          "Research project exploring keystroke dynamics and clustering to detect password sharing on streaming services. Tested on 40 participants; found keystroke patterns too similar to reliably distinguish users.",
       },
     ],
   },
@@ -133,53 +187,6 @@ export const queries: QueryEntry[] = [
         url: "https://loogle.com/work/bot-factory/growth",
         snippet:
           "Leo took charge of marketing, growing SEO to 1–2 booked meetings per week, learning to take sales calls and close deals while shipping client automation work.",
-      },
-    ],
-  },
-  {
-    id: "projects",
-    question: "What projects has Leo built?",
-    aliases: ["projects", "portfolio", "pinky", "darwingp", "ottoprop", "latch"],
-    results: [
-      {
-        title: "Pinky — macOS menu bar workflow companion",
-        url: "https://github.com/Leo-Strijbos/Pinky",
-        href: "https://github.com/Leo-Strijbos/Pinky",
-        snippet:
-          "Watches your screen, walks you through workflows step by step, and turns what you do into reusable skill files. Teach a process on screen, then ask Pinky to guide you later — or export .md skill files for other AI tools. Voice + vision with Control + Option across multiple monitors.",
-      },
-      {
-        title: "OttoProp — AI intern for property managers",
-        url: "https://github.com/Leo-Strijbos/OttoPropAI",
-        href: "https://github.com/Leo-Strijbos/OttoPropAI",
-        snippet:
-          "1 of 11 teams invited to the Ada Ventures hackathon for £100k in funding. An AI intern that autonomously handles maintenance requests end-to-end, sends emails, and updates the CRM using the LangChain agentic framework.",
-      },
-      {
-        title: "DarwinGP — genetic algorithm learns to race around randomly-generated racetracks",
-        url: "https://github.com/Leo-Strijbos/DarwinGP",
-        href: "https://github.com/Leo-Strijbos/DarwinGP",
-        snippet:
-          "Hundreds of tiny feed-forward networks drive cars on procedural closed circuits. A genetic algorithm selects parents, crosses them over, mutates weights, and keeps elites — no server, no ML frameworks, just Next.js and a canvas.",
-      },
-      {
-        title: "Latch Writing — focused macOS note-taking",
-        url: "https://github.com/Leo-Strijbos/latch",
-        href: "https://github.com/Leo-Strijbos/latch",
-        snippet:
-          "A minimal macOS note-taking app built for focused writing. Stores notes as local Markdown files, keeps the interface quiet, and includes an intentional focus lock mode for writing without app switching.",
-      },
-      {
-        title: "Malaria Detection — Faster R-CNN with TensorFlow",
-        url: "https://loogle.com/projects/malaria-detection",
-        snippet:
-          "Built a Faster R-CNN ResNet model with TensorFlow for malaria parasite detection (90% test accuracy), integrated via a Streamlit frontend.",
-      },
-      {
-        title: "Account Sharing Detection — keystroke dynamics research",
-        url: "https://loogle.com/projects/account-sharing",
-        snippet:
-          "Research project exploring keystroke dynamics and clustering to detect password sharing on streaming services. Tested on 40 participants; found keystroke patterns too similar to reliably distinguish users.",
       },
     ],
   },

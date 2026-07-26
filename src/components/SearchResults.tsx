@@ -29,9 +29,11 @@ function displayUrl(url: string) {
 export function SearchResults({
   query,
   match,
+  onNavigate,
 }: {
   query: string;
   match?: QueryEntry;
+  onNavigate?: (q: string) => void;
 }) {
   if (!match) {
     return (
@@ -46,12 +48,22 @@ export function SearchResults({
         <ul className="mt-3 space-y-2">
           {queries.map((q) => (
             <li key={q.id}>
-              <Link
-                href={`/search?q=${encodeURIComponent(q.question)}`}
-                className="text-[16px] text-[#1a0dab] hover:underline"
-              >
-                {q.question}
-              </Link>
+              {onNavigate ? (
+                <button
+                  type="button"
+                  onClick={() => onNavigate(q.question)}
+                  className="text-left text-[16px] text-[#1a0dab] hover:underline"
+                >
+                  {q.question}
+                </button>
+              ) : (
+                <Link
+                  href={`/search?q=${encodeURIComponent(q.question)}`}
+                  className="text-[16px] text-[#1a0dab] hover:underline"
+                >
+                  {q.question}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

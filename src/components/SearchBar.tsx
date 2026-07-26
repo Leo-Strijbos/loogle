@@ -10,12 +10,15 @@ type SearchBarProps = {
   initialQuery?: string;
   variant?: "home" | "results";
   autoFocus?: boolean;
+  /** Instant client navigation (used on the results page). */
+  onNavigate?: (q: string) => void;
 };
 
 export function SearchBar({
   initialQuery = "",
   variant = "home",
   autoFocus = false,
+  onNavigate,
 }: SearchBarProps) {
   const router = useRouter();
   const [query, setQuery] = useState(initialQuery);
@@ -40,6 +43,13 @@ export function SearchBar({
     }
   }, [autoFocus]);
 
+  // Prefetch search routes so home → results feels instant too
+  useEffect(() => {
+    for (const entry of queries) {
+      router.prefetch(`/search?q=${encodeURIComponent(entry.question)}`);
+    }
+  }, [router]);
+
   useEffect(() => {
     function onPointerDown(event: MouseEvent) {
       if (!containerRef.current?.contains(event.target as Node)) {
@@ -58,6 +68,13 @@ export function SearchBar({
     setOpen(false);
     setActiveIndex(-1);
     setShowAllSuggestions(false);
+    setQuery(trimmed);
+
+    if (onNavigate) {
+      onNavigate(trimmed);
+      return;
+    }
+
     router.push(`/search?q=${encodeURIComponent(trimmed)}`);
   }
 
