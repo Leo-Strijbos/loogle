@@ -57,7 +57,7 @@ export const queries: QueryEntry[] = [
   {
     id: "projects",
     question: "What projects has Leo built?",
-    aliases: ["projects", "portfolio", "mind", "pinky", "darwingp", "ottoprop", "latch"],
+    aliases: ["projects", "portfolio", "mind", "pinky", "patience", "darwingp", "ottoprop", "latch"],
     results: [
       {
         title: "Mind — plug-and-play LLM memory backend",
@@ -72,6 +72,13 @@ export const queries: QueryEntry[] = [
         href: "https://github.com/Leo-Strijbos/Pinky",
         snippet:
           "Watches your screen, walks you through workflows step by step, and turns what you do into reusable skill files. Teach a process on screen, then ask Pinky to guide you later — or export .md skill files for other AI tools. Voice + vision with Control + Option across multiple monitors.",
+      },
+      {
+        title: "Patience — TypeScript framework for queue-based AI agents",
+        url: "https://github.com/Leo-Strijbos/Patience",
+        href: "https://github.com/Leo-Strijbos/Patience",
+        snippet:
+          "Build durable AI agents as dynamic queues of typed tasks — one task can enqueue others, later tasks can wait on earlier ones, forming a DAG. Includes durable SQLite runs with crash recovery, retries, human-in-the-loop waits, and a local inspector for debugging.",
       },
       {
         title: "OttoProp — AI intern for property managers",
