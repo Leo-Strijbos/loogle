@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { QueryEntry } from "@/data/queries";
-import { queries } from "@/data/queries";
+import { findClosestQueries, queries } from "@/data/queries";
 import { KnowledgePanel } from "./KnowledgePanel";
 
 function displayUrl(url: string) {
@@ -36,6 +36,8 @@ export function SearchResults({
   onNavigate?: (q: string) => void;
 }) {
   if (!match) {
+    const closest = findClosestQueries(query, 3);
+    const didYouMean = closest.length > 0 ? closest : queries;
     return (
       <div className="mx-auto w-full max-w-[652px] px-4 pt-2 pb-16 sm:px-5 lg:ml-[152px] lg:mr-auto lg:px-0">
         <p className="mb-6 text-[14px] text-[#70757a]">
@@ -46,7 +48,7 @@ export function SearchResults({
         </p>
         <p className="mt-2 text-[14px] text-[#4d5156]">Did you mean:</p>
         <ul className="mt-3 space-y-2">
-          {queries.map((q) => (
+          {didYouMean.map((q) => (
             <li key={q.id}>
               {onNavigate ? (
                 <button

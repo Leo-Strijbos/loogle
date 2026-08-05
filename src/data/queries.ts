@@ -1,3 +1,5 @@
+import Fuse from "fuse.js";
+
 export type SearchResult = {
   title: string;
   url: string;
@@ -266,25 +268,53 @@ export function normalizeQuery(q: string): string {
   return q.trim().toLowerCase().replace(/[?!.]+$/g, "");
 }
 
+// One index serves findQuery, the dropdown, and "Did you mean" — a loose
+// threshold here, with findQuery applying its own stricter cutoff below.
+const fuse = new Fuse(queries, {
+  keys: [
+    { name: "question", weight: 3 },
+    { name: "aliases", weight: 3 },
+    { name: "results.title", weight: 2 },
+    { name: "results.snippet", weight: 1 },
+  ],
+  includeScore: true,
+  ignoreLocation: true,
+  threshold: 0.6,
+});
+
+// Fuse scores range 0 (perfect) to 1; only scores at or below this count as
+// a confident enough match to render a results page. Tuned empirically:
+// plausible queries (typos, partial words, loose phrasing) score ≤ ~0.75,
+// unrelated queries ("banana bread recipe") score ≥ ~0.92.
+const MATCH_THRESHOLD = 0.8;
+
 export function findQuery(q: string): QueryEntry | undefined {
   const n = normalizeQuery(q);
   if (!n) return undefined;
 
-  return queries.find((entry) => {
+  const exact = queries.find((entry) => {
     if (normalizeQuery(entry.question) === n) return true;
     if (entry.id === n) return true;
     return entry.aliases?.some((a) => normalizeQuery(a) === n || n.includes(normalizeQuery(a)));
   });
+  if (exact) return exact;
+
+  const [best] = fuse.search(n, { limit: 1 });
+  if (best && (best.score ?? 1) <= MATCH_THRESHOLD) return best.item;
+  return undefined;
 }
 
 export function filterSuggestions(input: string): QueryEntry[] {
   const n = normalizeQuery(input);
   if (!n) return queries;
-  return queries.filter(
-    (entry) =>
-      normalizeQuery(entry.question).includes(n) ||
-      entry.aliases?.some((a) => normalizeQuery(a).includes(n) || n.includes(normalizeQuery(a))),
-  );
+  return fuse.search(n).map((r) => r.item);
+}
+
+/** Closest entries to a failed query, for "Did you mean" suggestions. */
+export function findClosestQueries(q: string, limit = 3): QueryEntry[] {
+  const n = normalizeQuery(q);
+  if (!n) return [];
+  return fuse.search(n, { limit }).map((r) => r.item);
 }
 
 export function getRandomQuery(): QueryEntry {
