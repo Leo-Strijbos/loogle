@@ -64,7 +64,7 @@ export function SearchPageClient({ initialQuery }: { initialQuery: string }) {
         ) : (
           <div className="mx-auto w-full max-w-[652px] px-4 pt-8 pb-16 sm:px-5 lg:ml-[152px] lg:px-0">
             <p className="text-[16px] text-[#4d5156]">
-              Enter a search term, or pick a suggestion from the search box.
+              Type a search, or pick one of the suggestions.
             </p>
           </div>
         )}

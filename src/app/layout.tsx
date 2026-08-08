@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "loogle",
   description:
-    "Search Leo Strijbos — Cambridge CS student, founding engineer at Briefcase, and builder of AI tools.",
+    "Search Leo Strijbos. Cambridge CS student, founding engineer at Briefcase, and builder of AI tools.",
 };
 
 export default function RootLayout({

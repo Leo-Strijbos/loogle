@@ -31,7 +31,7 @@ export const queries: QueryEntry[] = [
       name: "Leo Strijbos",
       subtitle: "Founding Engineer · Cambridge CS",
       description:
-        "Computer Science student at the University of Cambridge and founding engineer at Briefcase. Builds AI products, research tools, and focused macOS apps.",
+        "Computer Science student at the University of Cambridge and founding engineer at Briefcase. Builds AI agents, research tooling, and small macOS apps.",
       facts: [
         { label: "Education", value: "BA Computer Science, Cambridge" },
         { label: "Work", value: "Founding Engineer, Briefcase" },
@@ -62,58 +62,58 @@ export const queries: QueryEntry[] = [
     aliases: ["projects", "portfolio", "mind", "pinky", "patience", "darwingp", "ottoprop", "latch"],
     results: [
       {
-        title: "Mind — plug-and-play LLM memory backend",
+        title: "Mind — memory backend for LLM agents",
         url: "https://github.com/Leo-Strijbos/Mind",
         href: "https://github.com/Leo-Strijbos/Mind",
         snippet:
-          "A memory backend for AI agents that models the human brain. Agents send raw perceptions into Mind and query it for the smallest useful memory packet before they act. Mind owns storage, consolidation, recall, corrections, retention, and evidence packaging — callers should not have to design memory policy.",
+          "A memory backend for AI agents, modelled on human memory. Agents send raw perceptions into Mind and ask it for the smallest useful memory packet before they act. Mind handles storage, consolidation, recall, corrections, retention, and evidence packaging, so the calling agent never has to design a memory policy.",
       },
       {
-        title: "Pinky — macOS menu bar workflow companion",
+        title: "Pinky — macOS menu bar app that learns your workflows",
         url: "https://github.com/Leo-Strijbos/Pinky",
         href: "https://github.com/Leo-Strijbos/Pinky",
         snippet:
-          "Watches your screen, walks you through workflows step by step, and turns what you do into reusable skill files. Teach a process on screen, then ask Pinky to guide you later — or export .md skill files for other AI tools. Voice + vision with Control + Option across multiple monitors.",
+          "Watches your screen and walks you through a workflow step by step. Do the process once while Pinky watches and it writes a .md skill file you can replay later or hand to another AI tool. Runs on voice and screen vision, triggers with Control + Option, and works across multiple monitors.",
       },
       {
         title: "Patience — TypeScript framework for queue-based AI agents",
         url: "https://github.com/Leo-Strijbos/Patience",
         href: "https://github.com/Leo-Strijbos/Patience",
         snippet:
-          "Build durable AI agents as dynamic queues of typed tasks — one task can enqueue others, later tasks can wait on earlier ones, forming a DAG. Includes durable SQLite runs with crash recovery, retries, human-in-the-loop waits, and a local inspector for debugging.",
+          "Agents are built as queues of typed tasks, where one task can enqueue others and later tasks can wait on earlier ones, so a run forms a DAG. Runs are stored in SQLite and survive crashes, with retries, human-in-the-loop waits, and a local inspector for debugging.",
       },
       {
         title: "OttoProp — AI intern for property managers",
         url: "https://github.com/Leo-Strijbos/OttoPropAI",
         href: "https://github.com/Leo-Strijbos/OttoPropAI",
         snippet:
-          "1 of 11 teams invited to the Ada Ventures hackathon for £100k in funding. An AI intern that autonomously handles maintenance requests end-to-end, sends emails, and updates the CRM using the LangChain agentic framework.",
+          "One of 11 teams invited to the Ada Ventures hackathon for £100k in funding. An AI intern that takes a maintenance request from first message to resolution, sending the emails and updating the CRM along the way. Built on LangChain.",
       },
       {
         title: "DarwinGP — genetic algorithm learns to race around randomly-generated racetracks",
         url: "https://github.com/Leo-Strijbos/DarwinGP",
         href: "https://github.com/Leo-Strijbos/DarwinGP",
         snippet:
-          "Hundreds of tiny feed-forward networks drive cars on procedural closed circuits. A genetic algorithm selects parents, crosses them over, mutates weights, and keeps elites — no server, no ML frameworks, just Next.js and a canvas.",
+          "Hundreds of tiny feed-forward networks drive cars around procedurally generated closed circuits. A genetic algorithm picks parents, crosses them over, mutates weights, and keeps the elites. It all runs in the browser on Next.js and a canvas element, with no server and no ML framework.",
       },
       {
-        title: "Latch Writing — focused macOS note-taking",
+        title: "Latch Writing — stripped-back macOS note-taking",
         url: "https://github.com/Leo-Strijbos/latch",
         href: "https://github.com/Leo-Strijbos/latch",
         snippet:
-          "A minimal macOS note-taking app built for focused writing. Stores notes as local Markdown files, keeps the interface quiet, and includes an intentional focus lock mode for writing without app switching.",
+          "A macOS note-taking app with as little interface as it can get away with. Notes are plain Markdown files on your disk, and a focus lock mode stops you switching apps mid-draft.",
       },
       {
         title: "Malaria Detection — Faster R-CNN with TensorFlow",
         url: "https://loogle.com/projects/malaria-detection",
         snippet:
-          "Built a Faster R-CNN ResNet model with TensorFlow for malaria parasite detection (90% test accuracy), integrated via a Streamlit frontend.",
+          "A Faster R-CNN ResNet model built in TensorFlow that spots malaria parasites at 90% test accuracy, with a Streamlit frontend on top.",
       },
       {
         title: "Account Sharing Detection — keystroke dynamics research",
         url: "https://loogle.com/projects/account-sharing",
         snippet:
-          "Research project exploring keystroke dynamics and clustering to detect password sharing on streaming services. Tested on 40 participants; found keystroke patterns too similar to reliably distinguish users.",
+          "Used keystroke dynamics and clustering to try to catch password sharing on streaming services. Across 40 participants, typing patterns turned out too similar to tell users apart reliably.",
       },
     ],
   },
@@ -145,7 +145,7 @@ export const queries: QueryEntry[] = [
         title: "Founding Engineer at Briefcase",
         url: "https://loogle.com/work/briefcase",
         snippet:
-          "Leo is a founding engineer at Briefcase — an AI autopilot for accountants and bookkeepers. He shipped the Mileage Claims feature end-to-end and is now focused on improving the autopublish rate.",
+          "Leo is a founding engineer at Briefcase, an AI autopilot for accountants and bookkeepers. He built and shipped the Mileage Claims feature, and is now working on the autopublish rate.",
       },
     ],
   },
@@ -158,25 +158,25 @@ export const queries: QueryEntry[] = [
         title: "Founding Engineer — Briefcase",
         url: "https://loogle.com/work/briefcase",
         snippet:
-          "July 2026 – present. AI autopilot for accountants and bookkeepers. Shipped Mileage Claims end-to-end; currently improving autopublish rate.",
+          "July 2026 – present. AI autopilot for accountants and bookkeepers. Built and shipped the Mileage Claims feature; now working on the autopublish rate.",
       },
       {
         title: "Cofounder — The Bot Factory",
         url: "https://loogle.com/work/bot-factory",
         snippet:
-          "April 2025 – September 2025. Boutique AI automation agency for UK businesses. Built a maintenance request platform that saved a property management firm ~30 hours/week; grew SEO to 1–2 booked meetings per week.",
+          "April 2025 – September 2025. AI automation agency for UK businesses. Built a maintenance request platform that saved a property management firm about 30 hours a week; grew SEO to 1–2 booked meetings a week.",
       },
       {
         title: "Machine Learning Research Intern — Novartis (2025)",
         url: "https://loogle.com/work/novartis-2025",
         snippet:
-          "Aug – Sep 2025. Invited back to the same group. AI research on Bayesian modelling for dose-finding studies. Built an LLM tool in an RStudio sandbox to generate and self-correct models — essentially Cursor for Bayesian inference. Delivered a seminar on Bayesian modelling with AI.",
+          "Aug – Sep 2025. Invited back to the same group. Research on Bayesian modelling for dose-finding studies. Built an LLM tool in an RStudio sandbox that writes models and corrects its own errors, roughly Cursor for Bayesian inference. Gave a seminar on Bayesian modelling with AI.",
       },
       {
         title: "Machine Learning Research Intern — Novartis (2023)",
         url: "https://loogle.com/work/novartis-2023",
         snippet:
-          "Sep – Oct 2023. Designed an LLM-based system to extract structured information from clinical trial reports. Delivered a seminar on practical applications of LLMs in clinical informatics.",
+          "Sep – Oct 2023. Built an LLM system that pulls structured data out of clinical trial reports. Gave a seminar on using LLMs in clinical informatics.",
       },
     ],
   },
@@ -186,16 +186,16 @@ export const queries: QueryEntry[] = [
     aliases: ["bot factory", "the bot factory"],
     results: [
       {
-        title: "The Bot Factory — Boutique AI automation agency",
+        title: "The Bot Factory — small AI automation agency",
         url: "https://loogle.com/work/bot-factory",
         snippet:
-          "Cofounded by Leo (April – September 2025). Served UK businesses including property managers, commercial finance brokers, and online communities. Designed and delivered client projects end-to-end, including a maintenance request management platform that saved ~30 hours per week.",
+          "Cofounded by Leo (April – September 2025). Clients were UK businesses: property managers, commercial finance brokers, and online communities. Leo scoped, built, and delivered the projects himself, among them a maintenance request platform that saved one firm about 30 hours a week.",
       },
       {
         title: "Growing The Bot Factory: SEO, sales, and delivery",
         url: "https://loogle.com/work/bot-factory/growth",
         snippet:
-          "Leo took charge of marketing, growing SEO to 1–2 booked meetings per week, learning to take sales calls and close deals while shipping client automation work.",
+          "Leo ran marketing and grew SEO to 1–2 booked meetings a week. He also learned to take the sales calls and close the deals, while still shipping the client automation work.",
       },
     ],
   },
@@ -214,7 +214,7 @@ export const queries: QueryEntry[] = [
         title: "AlphaFold tooling for protein researchers",
         url: "https://loogle.com/thinking/alphafold-tooling",
         snippet:
-          "Building batching and pipeline tooling for AlphaFold to make large-scale structure prediction more practical for protein researchers.",
+          "Building batching and pipeline tooling for AlphaFold so researchers can run structure prediction over large sets of sequences in one go.",
       },
     ],
   },
@@ -240,13 +240,13 @@ export const queries: QueryEntry[] = [
         title: "Email Leo — ljfs2@cam.ac.uk",
         url: "mailto:ljfs2@cam.ac.uk",
         href: "mailto:ljfs2@cam.ac.uk",
-        snippet: "Best for professional or academic reach-outs. Cambridge email.",
+        snippet: "Cambridge address. Best for academic or work enquiries.",
       },
       {
         title: "Phone — +41 79 567 53 01",
         url: "tel:+41795675301",
         href: "tel:+41795675301",
-        snippet: "Available by phone.",
+        snippet: "Swiss number, if you would rather call.",
       },
       {
         title: "GitHub — Leo-Strijbos",
