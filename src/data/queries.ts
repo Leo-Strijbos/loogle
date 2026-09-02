@@ -29,23 +29,23 @@ export const queries: QueryEntry[] = [
     aliases: ["who is leo", "leo strijbos", "about leo"],
     knowledgePanel: {
       name: "Leo Strijbos",
-      subtitle: "Founding Engineer · Cambridge CS",
+      subtitle: "Cambridge CS · ex-Briefcase",
       description:
-        "Computer Science student at the University of Cambridge and founding engineer at Briefcase. Builds AI agents, research tooling, and small macOS apps.",
+        "Computer Science student at the University of Cambridge. Was a founding engineer at Briefcase. Builds AI agents, research tooling, and small macOS apps.",
       facts: [
         { label: "Education", value: "BA Computer Science, Cambridge" },
-        { label: "Work", value: "Founding Engineer, Briefcase" },
+        { label: "Work", value: "Founding Engineer, Briefcase (2026)" },
         { label: "Languages", value: "English, Dutch, German" },
         { label: "GitHub", value: "github.com/Leo-Strijbos" },
       ],
     },
     results: [
       {
-        title: "Leo Strijbos — Founding Engineer & Cambridge CS student",
+        title: "Leo Strijbos — Cambridge CS student & founding engineer",
         url: "https://www.linkedin.com/in/leostrijbos/",
         href: "https://www.linkedin.com/in/leostrijbos/",
         snippet:
-          "Leo Strijbos is a Computer Science undergraduate at the University of Cambridge and founding engineer at Briefcase, an AI autopilot for accountants. Previously cofounded The Bot Factory and interned twice in ML research at Novartis.",
+          "Leo Strijbos is a Computer Science undergraduate at the University of Cambridge. He was a founding engineer at Briefcase, an AI autopilot for accountants, cofounded The Bot Factory, and interned twice in ML research at Novartis.",
       },
       {
         title: "Leo Strijbos on GitHub",
@@ -59,8 +59,33 @@ export const queries: QueryEntry[] = [
   {
     id: "projects",
     question: "What projects has Leo built?",
-    aliases: ["projects", "portfolio", "mind", "pinky", "patience", "darwingp", "ottoprop", "latch"],
+    aliases: [
+      "projects",
+      "portfolio",
+      "packing problems",
+      "batchfold",
+      "mind",
+      "pinky",
+      "patience",
+      "darwingp",
+      "ottoprop",
+      "latch",
+    ],
     results: [
+      {
+        title: "Packing problems — twelve records in Erich Friedman's Packing Center",
+        url: "https://github.com/Leo-Strijbos/packing-problems",
+        href: "https://github.com/Leo-Strijbos/packing-problems",
+        snippet:
+          "Twelve certified improvements to best-known values in Erich Friedman's Packing Center, across ten cells and four tables (2 records held since 2007!). Each packing is reconstructed from the incumbent's published image, then converged exactly: freeze the contact topology, solve by SQP, repeat. Each claim was reproduced by a blind third-party verifier given the coordinates and nothing else.",
+      },
+      {
+        title: "BatchFold — protein engineering tools for Claude",
+        url: "https://github.com/Leo-Strijbos/batchfold",
+        href: "https://github.com/Leo-Strijbos/batchfold",
+        snippet:
+          "The parallelisation and batching layer for protein folding models. All inside Claude. 28 MCP tools and five skills over a Cloudflare Worker, a SQLite database, and an object store, all running on your own machine.",
+      },
       {
         title: "Mind — memory backend for LLM agents",
         url: "https://github.com/Leo-Strijbos/Mind",
@@ -137,28 +162,16 @@ export const queries: QueryEntry[] = [
     ],
   },
   {
-    id: "currently-up-to",
-    question: "What is Leo currently up to?",
-    aliases: ["current job", "briefcase", "what is leo doing"],
-    results: [
-      {
-        title: "Founding Engineer at Briefcase",
-        url: "https://loogle.com/work/briefcase",
-        snippet:
-          "Leo is a founding engineer at Briefcase, an AI autopilot for accountants and bookkeepers. He built and shipped the Mileage Claims feature, and is now working on the autopublish rate.",
-      },
-    ],
-  },
-  {
     id: "worked",
     question: "Where has Leo worked?",
-    aliases: ["work experience", "jobs", "novartis", "employment"],
+    aliases: ["work experience", "jobs", "novartis", "employment", "briefcase"],
     results: [
       {
         title: "Founding Engineer — Briefcase",
-        url: "https://loogle.com/work/briefcase",
+        url: "https://loogle.com/ai-memories.pdf",
+        href: "/ai-memories.pdf",
         snippet:
-          "July 2026 – present. AI autopilot for accountants and bookkeepers. Built and shipped the Mileage Claims feature; now working on the autopublish rate.",
+          "July 2026 – August 2026. AI autopilot for accountants and bookkeepers. Mileage claims, autopublish rate, AI memories, self-healing software.",
       },
       {
         title: "Cofounder — The Bot Factory",
@@ -202,7 +215,14 @@ export const queries: QueryEntry[] = [
   {
     id: "thinking",
     question: "What is Leo currently interested in?",
-    aliases: ["computational biology", "protein", "alphafold", "research interests"],
+    aliases: [
+      "computational biology",
+      "protein",
+      "alphafold",
+      "research interests",
+      "chip verification",
+      "hardware bugs",
+    ],
     results: [
       {
         title: "Inverse protein folding & computational biology",
@@ -215,6 +235,12 @@ export const queries: QueryEntry[] = [
         url: "https://loogle.com/thinking/alphafold-tooling",
         snippet:
           "Building batching and pipeline tooling for AlphaFold so researchers can run structure prediction over large sets of sequences in one go.",
+      },
+      {
+        title: "Chip verification",
+        url: "https://loogle.com/thinking/chip-verification",
+        snippet:
+          "Training models to find bugs in open-source chip designs and specifications.",
       },
     ],
   },
