@@ -44,24 +44,24 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal>
-              I&apos;ve built a bunch of agent infrastructure based on my own experiences.
-              I felt that using Markdown files for memory was pretty primitive so I wrote{" "}
-              <ExternalLink href="https://github.com/Leo-Strijbos/Mind">Mind</ExternalLink>, a plug-and-play memory backend for agents which models the human brain. 
-              I also figured that queues would suit agents better than while-loops, so I wrote{" "}
-              <ExternalLink href="https://github.com/Leo-Strijbos/Patience">Patience</ExternalLink>, a framework for building queue-based agents.
-              I also felt inspired by{" "}<ExternalLink href="https://github.com/Leo-Strijbos/Pinky">Farza&apos;s Clicky</ExternalLink>, so I forked it and turned it into an internal company brain called{" "}
-              <ExternalLink href="https://github.com/Leo-Strijbos/Pinky">Pinky</ExternalLink>.
-            </Reveal>
-
-            <Reveal>
               My interest in bio came from training neural nets to detect malaria in high school, and then two ML research internships at Novartis.
               I built{" "}
               <ExternalLink href="https://github.com/Leo-Strijbos/batchfold">BatchFold</ExternalLink>, a parallelisation and batching infrastructure for protein folding models.
             </Reveal>
 
             <Reveal>
-              In between, I spent a summer as founding engineer at{" "}
-              <ExternalLink href="/ai-memories.pdf">Briefcase</ExternalLink>, and before that I
+              I&apos;ve built a bunch of agent infrastructure based on my own experiences.
+              I felt that using Markdown files for memory was pretty primitive so I wrote{" "}
+              <ExternalLink href="https://github.com/Leo-Strijbos/Mind">Mind</ExternalLink>, a general-purpose neural memory backend.
+              Intuitively, I figured that queues would suit agents better than while-loops, so I wrote{" "}
+              <ExternalLink href="https://github.com/Leo-Strijbos/Patience">Patience</ExternalLink>, a framework for building queue-based agents.
+              I also felt inspired by{" "}<ExternalLink href="https://github.com/Leo-Strijbos/Pinky">Farza&apos;s Clicky</ExternalLink>, so I forked it and turned it into an internal company brain called{" "}
+              <ExternalLink href="https://github.com/Leo-Strijbos/Pinky">Pinky</ExternalLink>.
+            </Reveal>
+
+            <Reveal>
+              In between, I spent a summer as founding engineer intern at{" "}
+              <ExternalLink href="https://briefcase.so">Briefcase</ExternalLink>, and before that I
               cofounded a small automation agency with my friend Tom.
             </Reveal>
 
