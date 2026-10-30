@@ -19,8 +19,8 @@ export default function HomePage() {
           <Image
             src="/leo.png"
             alt="Leo Strijbos"
-            width={80}
-            height={80}
+            width={120}
+            height={120}
             priority
             className="mb-8 h-20 w-20 object-cover"
           />
@@ -31,7 +31,7 @@ export default function HomePage() {
 
           <div className="mt-9 flex flex-col gap-7 font-prose text-[clamp(1.125rem,2.2vw,1.375rem)] leading-[1.6] text-prose">
             <Reveal>
-              I&apos;m in my third year of computer science at Cambridge. I&apos;m researching and building in machine learning, chip verification and computational biology.
+              I&apos;m in my third year of computer science at Cambridge. I&apos;m researching and building in machine learning, chip design and computational biology.
 
             </Reveal>
 
@@ -39,8 +39,7 @@ export default function HomePage() {
               <ExternalLink href="https://github.com/Leo-Strijbos/packing-problems">
                 I hold 10 records in packing problems. 
               </ExternalLink>{" "}
-              Two of them had stood since 2007, and every one was reproduced
-              blind by a third-party verifier.
+              Two of them had stood since 2007. Several of my records have since been broken.
             </Reveal>
 
             <Reveal>
@@ -50,13 +49,9 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal>
-              I&apos;ve built a bunch of agent infrastructure based on my own experiences.
-              I felt that using Markdown files for memory was pretty primitive so I wrote{" "}
-              <ExternalLink href="https://github.com/Leo-Strijbos/Mind">Mind</ExternalLink>, a general-purpose neural memory backend.
-              Intuitively, I figured that queues would suit agents better than while-loops, so I wrote{" "}
-              <ExternalLink href="https://github.com/Leo-Strijbos/Patience">Patience</ExternalLink>, a framework for building queue-based agents.
-              I also felt inspired by{" "}<ExternalLink href="https://github.com/Leo-Strijbos/Pinky">Farza&apos;s Clicky</ExternalLink>, so I forked it and turned it into an internal company brain called{" "}
-              <ExternalLink href="https://github.com/Leo-Strijbos/Pinky">Pinky</ExternalLink>.
+              I've also done a bunch of work with open-source cores. I completed the first comprehensive formal verification of 
+              {" "}<ExternalLink href="https://github.com/Leo-Strijbos/hazard3-formal">Raspberry Pi&apos;s Hazard 3 core</ExternalLink>.
+              I also discovered {" "}<ExternalLink href="https://github.com/ucb-bar/saturn-vectors/pull/102">this priviledge escalation bug</ExternalLink>{" "}in the Saturn Vector Unit.
             </Reveal>
 
             <Reveal>
@@ -67,8 +62,7 @@ export default function HomePage() {
 
             <Reveal>
               Right now I&apos;m training models for inverse protein folding,
-              and teaching models to read a chip specification against its RTL
-              to find real bugs.
+              and building EDA tools for AI inference chips.
             </Reveal>
 
             <Reveal className="pt-3">
