@@ -316,6 +316,94 @@ html[data-open="opening"] .open-page {
 }
 
 /* ---------------------------------------------------------------------------
+   Scanlines: a fixed, click-through layer over the whole page, after the CRT
+   overlay on mainframe.vc. Two pseudo-elements, no JavaScript:
+
+     ::before  1px lines every --gap, crawling down one period at a time and
+               looping, so they appear to scroll forever
+     ::after   a soft band of paper sweeping top to bottom, washing the lines
+               out as it passes — the slow "pulse"
+
+   Their original is white lines in overlay blend on a dark navy page; on
+   paper that brightens nothing and vanishes, so here the lines are ink,
+   multiplied, and the band is white — which multiplies to no change, so it
+   erases the lines it covers rather than tinting the page.
+     faint oxblood lines   --scan-line: rgb(139 34 41 / 9%)
+   Delete the <div className="scanlines"> in app/layout.tsx to remove it.
+   --------------------------------------------------------------------------- */
+
+.scanlines {
+  --gap: 3px;
+  --scan-line: rgb(26 26 24 / 5%);
+  --scan-speed: 6s;
+  --roll-speed: 7s;
+
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  overflow: hidden;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--gap) * -8) 0 auto;
+  height: calc(100% + var(--gap) * 16);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--scan-line) 0,
+    var(--scan-line) 1px,
+    transparent 1px,
+    transparent var(--gap)
+  );
+  animation: scan-crawl var(--scan-speed) linear infinite;
+  will-change: transform;
+}
+
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 32%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(255 255 255 / 70%) 50%,
+    transparent
+  );
+  animation: scan-roll var(--roll-speed) linear infinite;
+  will-change: transform;
+}
+
+@keyframes scan-crawl {
+  to {
+    transform: translateY(calc(var(--gap) * 8));
+  }
+}
+
+@keyframes scan-roll {
+  from {
+    transform: translateY(-130%);
+  }
+  to {
+    transform: translateY(440%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scanlines::before,
+  .scanlines::after {
+    animation: none;
+  }
+
+  .scanlines::after {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
    Paragraph reveal on scroll — see components/Reveal.tsx.
 
    Pre-hidden only once html[data-js] confirms JavaScript ran (stamped before

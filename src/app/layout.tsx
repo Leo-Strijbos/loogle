@@ -53,7 +53,11 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: earlyScript }} />
       </head>
-      <body className="bg-paper text-ink antialiased">{children}</body>
+      <body className="bg-paper text-ink antialiased">
+        {children}
+        {/* Scanline overlay — see .scanlines in globals.css. */}
+        <div className="scanlines" aria-hidden="true" />
+      </body>
     </html>
   );
 }

@@ -22,7 +22,7 @@ export default function HomePage() {
             width={120}
             height={120}
             priority
-            className="mb-8 h-20 w-20 object-cover"
+            className="mb-8 h-24 w-24 object-cover"
           />
 
           <h1 className="font-display text-[clamp(2.5rem,8vw,3.75rem)] leading-[1.04] tracking-[-0.015em]">
